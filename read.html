@@ -33,7 +33,7 @@
 	
 
 	function plusdix(){
-		if(page == 1){
+		if(page == 1 && page <= total-9){
 			page = page+8;
 		}else if(page <= total-9){
 			page = page+9;
