@@ -13,7 +13,7 @@
 	<img src=''>
 	<div id='left' onclick='change("+")' class='button'></div>
 	<div id='right' onclick='change("-")' class='button'></div>
-	<div onclick='switchlang()' id='switch' class='button'>switch</div>
+
 </body>
 <script>
 	var lang = 'jp';
@@ -27,17 +27,10 @@
 		document.getElementById('right').style.opacity = '0%';
 		document.getElementById('left').style.opacity = '0%';
 		document.getElementById('plaque').onclick = function(){switchlang()};
-		document.getElementById('switch').style.display = 'none';
+		
 	}
 
-	function switchlang(){
-		if(lang == 'jp'){
-			lang = 'en';
-		}else{
-			lang = 'jp';
-		}
-			document.getElementsByTagName('img')[0].src = 'library/'+niconiconii+'/'+lang+'/'+page+'.jpg';
-	}
+	
 
 	function plusdix(){
 		if(page == 1){
