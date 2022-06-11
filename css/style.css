@@ -25,18 +25,25 @@ html{
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 75px;
-	height: 400vh;
+	width: 360px;
+	height: 100vh;
 }
 
 #left{
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 75px;
-	height: 400vh;
+	width: 360px;
+	height: 100vh;
 }
-
+#left:hover{
+	width: 200px;
+#right:hover{
+	width: 200px;
+.left:hover{
+	width: 200px;
+.right:hover{
+	width: 200px;
 #switch{
 	position: fixed;
 	bottom: 0;
@@ -50,14 +57,14 @@ html{
 	color: ghostwhite;
 	cursor: pointer;
 	background: #111;
-	opacity: 70%;
+	opacity: 0%;
 	text-align: center;
 	padding: 5px;
 	transition: 0.2s;
 }
 
 .button:hover{
-	opacity: 100%;
+	opacity: 10%;
 }
 
 #num{
