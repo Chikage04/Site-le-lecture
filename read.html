@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="library/logoo.ico" />
+	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
+	<title>coucou petite perruche</title>
+	<script src='nikolib.js'></script>
+</head>
+<body>
+
+	<span onclick="plusdix()" id='num'>1 </span>
+	<div  id='menu'>
+		<a href="index.html"> Back</a>
+	</div>
+	<div id='plaque' onclick='zoom()'></div>
+	<img src=''>
+	<div id='left' onclick='change("+")' class='button'></div>
+	<div id='right' onclick='change("-")' class='button'></div>
+
+</body>
+<script>
+	var lang = 'jp';
+	var page = 0;
+	var zoomed = false;
+	var total = $_GET('total');
+	var niconiconii = $_GET('niconiconii');
+	document.getElementsByTagName('img')[0].style.height = '98vh';
+	var windowX = window.innerWidth;
+	if(windowX < 612){
+		document.getElementById('right').style.opacity = '0%';
+		document.getElementById('left').style.opacity = '0%';
+		document.getElementById('plaque').onclick = function(){switchlang()};
+		
+	}
+
+	
+
+	function plusdix(){
+		if(page == 1 && page <= total-9){
+			page = page+8;
+		}else if(page <= total-9){
+			page = page+9;
+		}
+		change('+');
+	}
+
+	function change(symb){
+		if(symb == '+'){
+			if(page < total){
+				page++;
+			}
+		}else{
+			if(page != 1){
+				page--;
+			}
+		}
+			document.getElementsByTagName('img')[0].src = 'library/'+niconiconii+'/'+lang+'/'+'A ('+page+')'+'.png' ;
+			document.getElementById('num').innerHTML = page;
+	}
+
+	function zoom(){
+		if(zoomed == false){
+			document.getElementsByTagName('img')[0].style.height = '200vh';
+			document.getElementById('plaque').style.height = '200vh';
+			zoomed = true;
+		}else{
+			document.getElementsByTagName('img')[0].style.height = '98vh';
+			document.getElementById('plaque').style.height = '98vh';
+			zoomed = false;	
+		}
+	}
+
+	document.addEventListener("keydown", (e) => {
+  		if (e.keyCode == '37'){
+  			change('+');
+  		}
+
+  		if (e.keyCode == '39'){
+  			change('-');
+  		}
+
+		if (e.keyCode == '13'){
+  			switchlang();
+  		}  		
+	});
+
+	change('+');
+</script>
+</html>
