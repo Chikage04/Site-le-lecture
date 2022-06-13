@@ -95,8 +95,9 @@ html {
 	color: rgb(0, 89, 255);
 }
 
-.a {
+a {
 	text-decoration: none;
+	color: brown;
 }
 
 @media screen and (max-width: 1090px) {
