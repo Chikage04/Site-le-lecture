@@ -66,21 +66,7 @@
 		document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 		document.getElementById('num').innerHTML = page;
 	}
-	function isMobile() { return ('ontouchstart' in document.documentElement); }
-
-function zoom() {
-  if (!isMobile()) return;
-  
-  if (zoomed == false) {
-				document.getElementsByTagName('img')[0].style.height = '200vh';
-				document.getElementById('plaque').style.height = '200vh';
-				zoomed = true;
-			} else {
-				document.getElementsByTagName('img')[0].style.height = '100%';
-				document.getElementById('plaque').style.height = '100%';
-				zoomed = false;
-			}
-}
+	
 
 	document.addEventListener("keydown", (e) => {
 		if (e.keyCode == '37') {
