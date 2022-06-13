@@ -33,7 +33,7 @@
 	var zoomed = false;
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
-	document.getElementsByTagName('img')[0].style.height = '75vh';
+	document.getElementsByTagName('img')[0].style.height = '98vh';
 	var windowX = window.innerWidth;
 	if (windowX < 612) {
 		document.getElementById('right').style.opacity = '0%';
@@ -55,7 +55,7 @@
 function isMobile() { return ('ontouchstart' in document.documentElement); }
 
 function zoom() {
-  if (!isMobile()) return;
+  if (isMobile()) return;
   
   if (zoomed == false) {
 				document.getElementsByTagName('img')[0].style.height = '200vh';
