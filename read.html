@@ -66,24 +66,12 @@
 		document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 		document.getElementById('num').innerHTML = page;
 	}
-	function isMobileDevice() {
-		if (navigator.userAgent.match(/iPhone/i)
-			|| navigator.userAgent.match(/webOS/i)
-			|| navigator.userAgent.match(/Android/i)
-			|| navigator.userAgent.match(/iPad/i)
-			|| navigator.userAgent.match(/iPod/i)
-			|| navigator.userAgent.match(/BlackBerry/i)
-			|| navigator.userAgent.match(/Windows Phone/i)
-		) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	function zoom() {
-		if (isMobileDevice == true) {
-			if (zoomed == false) {
+	function isMobile() { return ('ontouchstart' in document.documentElement); }
+
+function zoom() {
+  if (!isMobile()) return;
+  
+  if (zoomed == false) {
 				document.getElementsByTagName('img')[0].style.height = '200vh';
 				document.getElementById('plaque').style.height = '200vh';
 				zoomed = true;
@@ -92,18 +80,7 @@
 				document.getElementById('plaque').style.height = '98vh';
 				zoomed = false;
 			}
-		} else {
-			if (zoomed == false) {
-				document.getElementsByTagName('img')[0].style.height = '200vh';
-				document.getElementById('plaque').style.height = '200vh';
-				zoomed = true;
-			} else {
-				document.getElementsByTagName('img')[0].style.height = '98vh';
-				document.getElementById('plaque').style.height = '100%';
-				zoomed = false;
-			}
-		}
-	}
+}
 
 	document.addEventListener("keydown", (e) => {
 		if (e.keyCode == '37') {
