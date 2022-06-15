@@ -111,7 +111,7 @@ a {
 		right: 0;
 		top: 0;
 		width: 30%;
-		height: 100vh;
+		height: 92%;
 	}
 
 	#left {
@@ -119,7 +119,7 @@ a {
 		left: 0;
 		top: 0;
 		width: 30%;
-		height: 100vh;
+		height: 92%;
 	}
 
 	.button {
@@ -137,6 +137,7 @@ a {
 
 		font-size: 28;
 		padding: 2px;
+		width: 69vh;
 	}
 
 	#num {
