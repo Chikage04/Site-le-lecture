@@ -7,6 +7,7 @@
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Liste - Mangas</title>
+	<script src='main.js'></script>
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap");
 		@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
@@ -26,7 +27,7 @@
 
 		p {
 			display: block;
-			margin-block-start: 1em;
+			margin-block-start: 0em;
 			margin-block-end: 1em;
 			margin-inline-start: 2em;
 			margin-inline-end: 2em;
@@ -60,8 +61,8 @@
 		}
 
 		.pika2 {
-			background: rgb(2, 19, 36);
-			opacity: 93%;
+			background: rgba(2, 19, 36, 0.936);
+			opacity: 100%;
 			right: 0;
 			top: 0;
 			width: 940px;
@@ -89,7 +90,9 @@
 
 
 		a {
-			color: rgb(255, 255, 246);
+
+			text-decoration: none;
+			color: rgb(177, 203, 255);
 			font-family: 'Contrail One', cursive;
 
 		}
@@ -97,7 +100,7 @@
 
 		a:hover {
 
-			color: rgb(90, 109, 255);
+			color: rgb(167, 208, 255);
 
 		}
 
@@ -143,8 +146,8 @@
 		}
 
 		.page01 {
-			background: url("library/majo%20no%20ie/vol1/jp/fond2cool.jpg");
-			background-position: center;
+			background: url("library/majo%20no%20ie/vol1/jp/drrr.png");
+			background-position: bottom;
 			background-size: cover;
 			width: 100%;
 			height: 100%;
@@ -230,8 +233,11 @@
 			box-shadow: 0 4px 40px 0 rgba(114, 137, 218, .2);
 			background: #7289da;
 
+
 			font-family: 'Contrail One', cursive;
 		}
+
+
 
 		.container-haut:hover {
 
@@ -240,6 +246,14 @@
 			color: rgb(255, 255, 255);
 			font-weight: 200;
 
+		}
+
+		.next {
+			display: block;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 2em;
+			margin-inline-end: 2em;
 		}
 
 		.container-bas {
@@ -267,11 +281,12 @@
 			background: #7289da;
 			text-align: left;
 			font-family: 'Contrail One', cursive;
+			color: rgb(182, 233, 255);
 		}
 
 		#HCB_comment_box {
-			background: rgb(4, 39, 73);
-			opacity: 90%;
+			background: rgba(4, 38, 73, 0.912);
+			opacity: 100%;
 			width: 78%;
 		}
 
@@ -314,6 +329,8 @@
 			padding-right: 3px;
 			padding-top: 3px;
 			padding-bottom: 3px;
+			position: relative;
+			z-index: 999;
 		}
 
 		#HCB_comment_box #hcb_form .hcb-door-in {
@@ -325,6 +342,8 @@
 			padding-top: 3px;
 			padding-bottom: 3px;
 			border-radius: 6px;
+			position: relative;
+			z-index: 999;
 		}
 
 		#HCB_comment_box .hcb-icon {
@@ -360,14 +379,25 @@
 			color: #f86f06 !important;
 			text-decoration: none;
 		}
-		.aide{
-			height: -34px;
+
+		.gintama {
+			z-index: 7;
+			height: 0px;
+			position: relative;
+			top: 31vh;
+			margin-block-start: 0em;
+			margin-block-end: 0em;
+			margin-inline-start: 0em;
+			margin-inline-end: 0em;
+			font-size: 12px;
+			padding-left: 750px;
 		}
+
+
 
 		@media screen and (max-width: 1090px) {
 			.pika2 {
-				background: rgb(2, 19, 36);
-				opacity: 93%;
+
 				right: 0;
 				top: 0;
 
@@ -540,6 +570,22 @@
 				margin-right: 0px;
 
 			}
+
+			.gintama {
+				z-index: 7;
+				height: 0px;
+				position: relative;
+				top: 31vh;
+				margin-block-start: 0em;
+				margin-block-end: 0em;
+				margin-inline-start: 0em;
+				margin-inline-end: 0em;
+				font-size: 11px;
+				padding-left: 330px;
+				width: 128px;
+				text-align: left;
+				font-weight: bold;
+			}
 		}
 	</style>
 </head>
@@ -563,7 +609,9 @@
 						<div class="container-text">
 							<div class="container-haut" href='read.html?niconiconii=majo no ie/vol1&total=4'>
 								<a href='read.html?niconiconii=majo no ie/vol1&total=4'>
-									<p>Lire</p>
+									<div class="next">
+										<p>Lire</p>
+									</div>
 								</a>
 							</div>
 							<div class="container-bas">
@@ -586,7 +634,9 @@
 								<div class="container-haut">
 
 									<a href='read.html?niconiconii=color/vol1&total=6'>
-										<p>Lire</p>
+										<div class="next">
+											<p>Lire</p>
+										</div>
 									</a>
 
 								</div>
@@ -616,7 +666,9 @@
 							<div class="container-haut">
 
 								<a href='read.html?niconiconii=lezard/vol1&total=47'>
-									<p>Lire</p>
+									<div class="next">
+										<p>Lire</p>
+									</div>
 								</a><br>
 
 							</div>
@@ -628,20 +680,25 @@
 						</div>
 
 					</div>
-					
+
 				</div>
+				<div class="gintama">
+					<p>Connectez vous avec ce <br>
+						bouton pour commenter.</p>
+				</div>
+
 				<!-- begin wwww.htmlcommentbox.com -->
 				<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> is loading
 					comments...
-					
+
 				</div>
 				<link rel="stylesheet" type="text/css"
 					href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
 				<script type="text/javascript"
 					id="hcb"> /*<!--*/ if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24OYnuw6et.%2FWKM8zAXqT5V0" + "&opts=16798&num=10&ts=1655153661295"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })(); /*-->*/ </script>
 				<!-- end www.htmlcommentbox.com -->
-				
-				
+
+
 			</center>
 		</div>
 	</div>
