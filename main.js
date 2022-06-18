@@ -6,7 +6,9 @@ setInterval(() => {
     const help = document.querySelector('#hcb_msg');
     if (help.style.display !== 'none') {
         aide.style.top = '34vh';
-    }
+    } else {
+      aide.style.top = '31vh';
+}
     if (door.style.display !== 'none') {
         aide.style.display = 'none';
     }
