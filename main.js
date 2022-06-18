@@ -4,6 +4,8 @@ setInterval(() => {
     const door = document.querySelector('#HCB_comment_box #hcb_form .hcb-door-out')
     const aide = document.getElementsByClassName('gintama')[0];
     const help = document.querySelector('#hcb_msg')
+    if (help !== null && help.style.display === 'none') {
+    }
     if (help.style.display !== 'none') {
         aide.style.top = '34vh';
     } else {
