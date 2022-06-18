@@ -6,7 +6,7 @@ setInterval(() => {
     const help = document.querySelector('#hcb_msg')
 
 
-    aide.style.top = help && help.textContent ? '31vh' : '34vh';
+    aide.style.top = help && help.textContent ? '34vh' : '31vh';
 
 
     if (door !== null && door.style.display !== 'none') {
