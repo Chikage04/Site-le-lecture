@@ -19,7 +19,7 @@ setInterval(() => {
     const help = document.querySelector('#hcb_msg')
 
     aide.style.top = help && help.textContent && Lscreen < "1090" ? '37vh' : '30vh';
-    aide.style.top = help && help.textContent && Lscreen > "1900" ? '34vh' : '31vh';
+    aide.style.top = help && help.textContent && Lscreen > "1090" ? '34vh' : '31vh';
 
 
 }, 100);
