@@ -106,9 +106,6 @@ a {
 }
 
 @media screen and (max-width: 1090px) {
-	img {
-		height: 90%;
-	}
 
 	#right {
 		position: fixed;
