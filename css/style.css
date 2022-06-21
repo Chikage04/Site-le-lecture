@@ -106,6 +106,10 @@ a {
 }
 
 @media screen and (max-width: 1090px) {
+	img {
+		
+		height: 90%;
+	}
 
 	#right {
 		position: fixed;
@@ -135,14 +139,14 @@ a {
 	}
 
 	#menu {
-
+		width: 135%;
 		font-size: 28;
 		padding: 2px;
 	}
 
 	#num {
 		font-size: 27px;
-		left: 91%;
+		left: 89%;
 		top: 6%;
 	}
 
