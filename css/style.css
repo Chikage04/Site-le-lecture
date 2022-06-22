@@ -159,7 +159,7 @@
 		}
 
 		option:hover {
-			background: rgb(148, 172, 255);
+			background: rgb(143, 160, 255);
 			color: rgb(0, 0, 0);
 		}
 
@@ -168,6 +168,7 @@
 			padding: 3px;
 			font-size: 17px;
 			font-family: 'Contrail One', cursive;
+			
 			width: 89px;
 			cursor: pointer;
 			border-radius: 8px;
@@ -215,6 +216,7 @@
 			border-radius: 8px;
 			position: relative;
 			z-index: 999;
+			background-color: rgb(180, 214, 228);
 			scrollbar-color: rebeccapurple;
 			scrollbar-width: thin;
 
