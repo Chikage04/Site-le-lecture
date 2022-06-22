@@ -18,8 +18,13 @@ setInterval(() => {
     const aide = document.getElementsByClassName('gintama')[0];
     const help = document.querySelector('#hcb_msg')
 
-    aide.style.top = help && help.textContent && screen.width < "1090" ? '37vh' : '30vh';
-    aide.style.top = help && help.textContent && screen.width > "1090" ? '34vh' : '31vh';
+    if(help && help.textContent){
+        if(screen.width < 1090){
+            aide.style.top = '37vh'
+        } else {
+            aide.style.top = '34vh'
+        }
+    }
 
 }, 100);
 
