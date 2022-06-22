@@ -171,21 +171,24 @@
 	function choice() {
 		if (queue_url == 'vol1&total=4') {
             var truc = document.querySelector("#pages").value;
+			
 
         } else if (queue_url == 'vol1&total=6') {
             var truc = document.querySelector("#pages1").value;
         } else {
             var truc = document.querySelector("#pages2").value;
+			
         }
 		var choix = document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + truc + ')' + '.png';
 		
 		if (queue_url == 'vol1&total=4') {
-            page = document.querySelector("#pages").value;
-
+            page = + document.querySelector("#pages").value;
+			
         } else if (queue_url == 'vol1&total=6') {
             page = document.querySelector("#pages1").value;
         } else {
-            page = document.querySelector("#pages2").value;
+           page = document.querySelector("#pages2").value;
+		   page = + page;
         }
 		
 		if (superbe.value > 9 || superbe1.value > 9 || superbe2.value > 9) {
