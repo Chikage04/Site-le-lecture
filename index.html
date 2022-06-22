@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/x-icon" href="library/logoo.ico" />
+	<link rel="preload" as="font">
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Liste - Mangas</title>
@@ -357,16 +358,18 @@
 		#HCB_comment_box .comment .likes img {
 			vertical-align: unset;
 			color: azure;
-			background-color: cornflowerblue;
+			background-color: rgb(115, 159, 241);
 			padding: 3px;
 			border-radius: 5px;
-			margin-bottom: -3px;
+			margin-bottom: -4px;
+			width: 23px;
 		}
 
 		#HCB_comment_box .comment .likes {
 			position: absolute;
 			top: 5px !important;
 			right: 10px !important;
+			font-size: 29px;
 		}
 
 		#HCB_comment_box #hcb_form #hcb_form_name_container {
@@ -392,9 +395,15 @@
 		}
 
 		#HCB_comment_box .hcb-comment-body {
-			
+
 			width: 90%;
 		}
+
+		#HCB_comment_box .hcb-comment-tb button {
+			color: #73d9f6;
+
+		}
+
 
 		.gintama {
 			z-index: 7;
@@ -600,6 +609,17 @@
 				text-align: left;
 				font-weight: bold;
 				right: 469px;
+			}
+
+			#HCB_comment_box .comment .likes {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 22px;
+			}
+
+			#HCB_comment_box .comment .likes img {
+				width: 16px;
 			}
 		}
 	</style>
