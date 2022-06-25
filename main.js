@@ -26,7 +26,17 @@ setInterval(() => {
         }
     }
 
-}, 100);
+}, 10);
+setInterval(() => {
+    const Lscreen = screen.width;
+    const aide = document.getElementsByClassName('gintama')[0];
+    const help = document.querySelector('#hcb_msg')
+
+    if(help && help.textContent){
+            help.textContent = 'Connectez-vous pour commenter'
+    }
+
+}, 10);
 
 
 
