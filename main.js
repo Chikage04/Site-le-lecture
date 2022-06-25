@@ -17,27 +17,24 @@ setInterval(() => {
     const Lscreen = screen.width;
     const aide = document.getElementsByClassName('gintama')[0];
     const help = document.querySelector('#hcb_msg')
+    const repl = document.querySelector("#HCB_comment_box #hcb_form #replying_to_container")
 
-    if(help && help.textContent){
-        if(screen.width < 1090){
+    if (help && help.textContent) {
+        if (screen.width < 1090) {
             aide.style.top = '37vh'
         } else {
             aide.style.top = '34vh'
         }
     }
-
-}, 10);
-setInterval(() => {
-    const Lscreen = screen.width;
-    const aide = document.getElementsByClassName('gintama')[0];
-    const help = document.querySelector('#hcb_msg')
-
-    if(help && help.textContent){
-            help.textContent = 'Connectez-vous pour commenter'
+    if (help && help.textContent) {
+        help.textContent = 'Connectez-vous pour commenter'
     }
-
+    if (repl && repl.textContent) {
+        if (screen.width < 1090) {
+            aide.style.top = '37vh'
+        }
+    }
 }, 10);
-
 
 
 
