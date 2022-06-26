@@ -165,7 +165,7 @@
 			color: rgb(0, 0, 0);
 		}
 
-		
+
 		#pages1 {
 			padding: 3px;
 			font-size: 17px;
@@ -206,7 +206,7 @@
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
 
-	
+
 
 
 		#pages2 {
@@ -248,26 +248,47 @@
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
-		@keyframes venant{
+
+		@keyframes venant {
 			0% {
 				transform: translateX(-9999px);
 			}
+
 			100% {
 				transform: translateX(0);
-				}
 			}
-			@keyframes partant{
+		}
+
+		@keyframes partant {
+			0% {
+				transform: translateX(0);
+			}
+
+			100% {
+				transform: translateX(+9999px);
+			}
+		}
+		@keyframes venantback {
+			0% {
+				transform: translateX(+9999px);
+			}
+
+			100% {
+				transform: translateX(0);
+			}
+		}
+			@keyframes partantback {
 				0% {
 					transform: translateX(0);
 				}
+	
 				100% {
-					transform: translateX(+9999px);
-					}
+					transform: translateX(-9999px);
 				}
+		}
 
-		
 
-		
+
 		@media screen and (max-width: 1090px) {
 			img {
 
