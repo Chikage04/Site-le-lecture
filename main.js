@@ -34,6 +34,11 @@ setInterval(() => {
             aide.style.top = '34vh'
         }
     }
+    if (help && help.textContent && repl && repl.textContent) {
+        if (screen.width < 1090) {
+            aide.style.top = '41vh'
+        }
+    }
 }, 10);
 
 
