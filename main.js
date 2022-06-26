@@ -31,7 +31,7 @@ setInterval(() => {
     }
     if (repl && repl.textContent) {
         if (screen.width < 1090) {
-            aide.style.top = '37vh'
+            aide.style.top = '34vh'
         }
     }
 }, 10);
