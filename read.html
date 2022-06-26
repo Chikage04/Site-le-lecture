@@ -129,12 +129,10 @@
 		if (symb == '+') {
 			if (page < total) {
 				page++;
-				limage.style.animation = 'partant 330ms'
+				limage.style.animation = 'partant 270ms'
 				setTimeout(function () {
-					limage.style.animation = 'venant 200ms'
-				}, 200);
-				
-				
+					limage.style.animation = 'venant 240ms'
+				}, 90);
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
@@ -143,26 +141,23 @@
 			}
 		} else if (symb == '=') {
 			page = page
-			limage.style.animation = 'partant 330ms'
-				setTimeout(function () {
-					limage.style.animation = 'venant 200ms'
-				}, 200);
 		} else {
 			if (page != 1) {
 				page--;
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
-				limage.style.animation = 'venant 330ms'
+				limage.style.animation = 'partantback 270ms'
 				setTimeout(function () {
-					limage.style.animation = 'partant 200ms'
-				}, 200);
+					limage.style.animation = 'venantback 240ms'
+				}, 90);
 
 			}
 		}
 		document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 		document.getElementById('num').innerHTML = page;
 	}
+
 	var superbe = document.querySelector("#pages")
 	var superbe1 = document.querySelector("#pages1")
 	var superbe2 = document.querySelector("#pages2")
