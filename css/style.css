@@ -25,6 +25,7 @@
 
 		html {
 			background: #222;
+			overflow-x: hidden;
 		}
 
 		#right {
@@ -247,6 +248,22 @@
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
+		@keyframes venant{
+			0% {
+				transform: translateX(-9999px);
+			}
+			100% {
+				transform: translateX(0);
+				}
+			}
+			@keyframes partant{
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(+9999px);
+					}
+				}
 
 		
 
