@@ -97,7 +97,7 @@
 
 
 	<div id='plaque' onclick='zoom()'></div>
-	<img src=''>
+	<img id='limage' src=''>
 	<div id='left' onclick='change("+")' class='button'></div>
 	<div id='right' onclick='change("-")' class='button'></div>
 
@@ -107,10 +107,7 @@
 	var page = 1;
 
 
-
-
-
-
+	const limage = document.querySelector("#limage")
 	var zoomed = false;
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
@@ -125,24 +122,41 @@
 	document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 	document.getElementById('num').innerHTML = page;
 
+
+
+
 	function change(symb) {
 		if (symb == '+') {
 			if (page < total) {
 				page++;
+				limage.style.animation = 'partant 330ms'
+				setTimeout(function () {
+					limage.style.animation = 'venant 200ms'
+				}, 200);
+				
+				
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
 				
+
 			}
 		} else if (symb == '=') {
 			page = page
+			limage.style.animation = 'partant 330ms'
+				setTimeout(function () {
+					limage.style.animation = 'venant 200ms'
+				}, 200);
 		} else {
 			if (page != 1) {
 				page--;
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
-				
+				limage.style.animation = 'venant 330ms'
+				setTimeout(function () {
+					limage.style.animation = 'partant 200ms'
+				}, 200);
 
 			}
 		}
@@ -171,27 +185,27 @@
 
 	function choice() {
 		if (queue_url == 'vol1&total=5') {
-            var truc = document.querySelector("#pages").value;
-			
+			var truc = document.querySelector("#pages").value;
 
-        } else if (queue_url == 'vol1&total=6') {
-            var truc = document.querySelector("#pages1").value;
-        } else {
-            var truc = document.querySelector("#pages2").value;
-			
-        }
+
+		} else if (queue_url == 'vol1&total=6') {
+			var truc = document.querySelector("#pages1").value;
+		} else {
+			var truc = document.querySelector("#pages2").value;
+
+		}
 		var choix = document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + truc + ')' + '.png';
-		
+
 		if (queue_url == 'vol1&total=5') {
-            page = + document.querySelector("#pages").value;
-			
-        } else if (queue_url == 'vol1&total=6') {
-            page = document.querySelector("#pages1").value;
-        } else {
-           page = document.querySelector("#pages2").value;
-		   page = + page;
-        }
-		
+			page = + document.querySelector("#pages").value;
+
+		} else if (queue_url == 'vol1&total=6') {
+			page = document.querySelector("#pages1").value;
+		} else {
+			page = document.querySelector("#pages2").value;
+			page = + page;
+		}
+
 		if (superbe.value > 9 || superbe1.value > 9 || superbe2.value > 9) {
 			change('=');
 		} else {
@@ -214,13 +228,13 @@
 		pages.style.display = 'unset';
 		pages1.style.display = 'none';
 		pages2.style.display = 'none';
-		
-	} else if(queue_url == 'vol1&total=6') {
+
+	} else if (queue_url == 'vol1&total=6') {
 		pages.style.display = 'none';
 		pages1.style.display = 'unset';
 		pages2.style.display = 'none';
-		
-	} else{
+
+	} else {
 		pages.style.display = 'none';
 		pages1.style.display = 'none';
 		pages2.style.display = 'unset';
