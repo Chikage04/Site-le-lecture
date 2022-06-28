@@ -97,7 +97,8 @@
 
 
 	<div id='plaque' onclick='zoom()'></div>
-	<img id='limage' src=''>
+	<img class='image1' id='limage' src=''>
+	<img class='image2' id='limage' src=''>
 	<div id='left' onclick='change("+")' class='button'></div>
 	<div id='right' onclick='change("-")' class='button'></div>
 
@@ -107,11 +108,13 @@
 	var page = 1;
 
 
-	const limage = document.querySelector("#limage")
+	const limage1 = document.querySelector(".image1")
+	const limage2 = document.querySelector(".image2")
 	var zoomed = false;
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
 	document.getElementsByTagName('img')[0].style.height = '98vh';
+	document.getElementsByTagName('img')[1].style.height = '98vh';
 	var windowX = window.innerWidth;
 	if (windowX < 612) {
 		document.getElementById('right').style.opacity = '0%';
@@ -120,6 +123,7 @@
 
 	}
 	document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
+	document.getElementsByTagName('img')[1].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 	document.getElementById('num').innerHTML = page;
 
 
@@ -128,16 +132,20 @@
 	function change(symb) {
 		if (symb == '+') {
 			if (page < total) {
-				page++;
-				limage.style.animation = 'partant 270ms'
+				limage1.style.animation = "partant 750ms";
 				setTimeout(function () {
-					limage.style.animation = 'venant 240ms'
-				}, 90);
+					limage1.style.animation = "1ms";
+				}, 770);
+				setTimeout(function () {
+					limage2.style.animation = "venant  730ms";
+				}, 1);
+				setTimeout(function () {
+					limage2.style.animation = "1ms";
+				}, 750);
+				page++;
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
-				
-
 			}
 		} else if (symb == '=') {
 			page = page
@@ -147,14 +155,21 @@
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
-				limage.style.animation = 'partantback 270ms'
+				limage1.style.animation = "partantback 750ms";
 				setTimeout(function () {
-					limage.style.animation = 'venantback 240ms'
-				}, 90);
+					limage1.style.animation = "1ms";
+				}, 770);
+				setTimeout(function () {
+					limage2.style.animation = "venantback  730ms";
+				}, 1);
+				setTimeout(function () {
+					limage2.style.animation = "1ms";
+				}, 750);
 
 			}
 		}
 		document.getElementsByTagName('img')[0].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
+		document.getElementsByTagName('img')[1].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 		document.getElementById('num').innerHTML = page;
 	}
 
@@ -278,14 +293,33 @@
 
 		if (zoomed == false) {
 			document.getElementsByTagName('img')[0].style.height = '200vh';
+			document.getElementsByTagName('img')[1].style.height = '200vh';
 			document.getElementById('plaque').style.height = '200vh';
+			limage1.style.marginBottom = "-1%";
+			limage2.style.marginTop = "-99%";
+			limage2.style.marginLeft = "0%";
 			zoomed = true;
 		} else {
 			document.getElementsByTagName('img')[0].style.height = '98vh';
+			document.getElementsByTagName('img')[1].style.height = '98vh';
 			document.getElementById('plaque').style.height = '98vh';
+			limage1.style.marginBottom = "0%";
+			limage2.style.marginTop = "0%";
+			limage2.style.marginLeft = "-35%";
 			zoomed = false;
 		}
 	}
+	function echelle() {
+	
+
+		if (zoomed === true) {
+			
+			limage1.style.marginbottom = "-1%";
+			limage2.style.marginbottom = "-99%";
+			limage2.style.marginleft = "0%";
+		}
+	
+}
 
 
 

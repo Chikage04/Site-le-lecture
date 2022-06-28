@@ -248,10 +248,17 @@
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
-
+		.image1{
+			transition: all 0.001s;
+			
+		}
+		.image2{
+			transition: all 0.001s;
+			margin-left: -35%;
+		}
 		@keyframes venant {
 			0% {
-				transform: translateX(-9999px);
+				transform: translateX(-999px);
 			}
 
 			100% {
@@ -265,12 +272,12 @@
 			}
 
 			100% {
-				transform: translateX(+9999px);
+				transform: translateX(+1099px);
 			}
 		}
 		@keyframes venantback {
 			0% {
-				transform: translateX(+9999px);
+				transform: translateX(+999px);
 			}
 
 			100% {
@@ -283,7 +290,7 @@
 				}
 	
 				100% {
-					transform: translateX(-9999px);
+					transform: translateX(-1099px);
 				}
 		}
 
@@ -339,6 +346,14 @@
 				left: 99%;
 				top: 7px;
 			}
+			.image1{
+				margin-bottom: -4%;
+				
+			}
+			.image2{
+				margin-top: -185%;
+				margin-left: 0%;
+			}
 
 		}
 
@@ -346,4 +361,6 @@
 			#monElement {
 				display: none;
 			}
+
 		}
+		
