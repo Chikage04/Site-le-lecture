@@ -250,7 +250,6 @@
 		}
 		.image1{
 			transition: all 0.001s;
-			
 		}
 		.image2{
 			transition: all 0.001s;
@@ -263,16 +262,19 @@
 
 			100% {
 				transform: translateX(0);
+			
 			}
 		}
 
 		@keyframes partant {
 			0% {
 				transform: translateX(0);
+				opacity: 1;
 			}
 
 			100% {
 				transform: translateX(+1099px);
+				opacity: 0;
 			}
 		}
 		@keyframes venantback {
@@ -287,10 +289,12 @@
 			@keyframes partantback {
 				0% {
 					transform: translateX(0);
+					opacity: 1;
 				}
 	
 				100% {
 					transform: translateX(-1099px);
+					opacity: 0;
 				}
 		}
 

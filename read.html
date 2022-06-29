@@ -126,31 +126,51 @@
 	document.getElementsByTagName('img')[1].src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + page + ')' + '.png';
 	document.getElementById('num').innerHTML = page;
 
+	setInterval(() => {
+		if (limage1.animationPlayState == "running") {
+			console.log("Désolé ! preventDefault() ne vous laissera pas cocher ceci.");
+		}
+	}, 5);
 
 
-
+	let isTurnable = 'true'
 	function change(symb) {
 		if (symb == '+') {
 			if (page < total) {
-				limage1.style.animation = "partant 750ms";
-				setTimeout(function () {
-					limage1.style.animation = "1ms";
-				}, 770);
-				setTimeout(function () {
-					limage2.style.animation = "venant  730ms";
-				}, 1);
-				setTimeout(function () {
-					limage2.style.animation = "1ms";
-				}, 750);
-				page++;
-				document.querySelector("#pages").value = page;
-				document.querySelector("#pages1").value = page;
-				document.querySelector("#pages2").value = page;
-			}
+				if (isTurnable == false) return;
+				isTurnable = false;
+					setTimeout(function () {
+						limage1.style.animation = "partant 750ms";
+						
+					}, 1);
+					setTimeout(function () {
+						limage1.style.animation = "1ms";
+					
+					}, 780);
+					setTimeout(function () {
+						limage2.style.animation = "venant  730ms";
+						
+					}, 1);
+					setTimeout(function () {
+						limage2.style.animation = "1ms";
+						
+					}, 760);
+					page++;
+					document.querySelector("#pages").value = page;
+					document.querySelector("#pages1").value = page;
+					document.querySelector("#pages2").value = page;
+					setTimeout(function () {
+						isTurnable = true;
+						
+					}, 790);
+				}
+			
 		} else if (symb == '=') {
 			page = page
 		} else {
 			if (page != 1) {
+				if (isTurnable == false) return;
+				isTurnable = false;
 				page--;
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
@@ -165,6 +185,10 @@
 				setTimeout(function () {
 					limage2.style.animation = "1ms";
 				}, 750);
+				setTimeout(function () {
+						isTurnable = true;
+						
+					}, 790);
 
 			}
 		}
@@ -310,16 +334,16 @@
 		}
 	}
 	function echelle() {
-	
+
 
 		if (zoomed === true) {
-			
+
 			limage1.style.marginbottom = "-1%";
 			limage2.style.marginbottom = "-99%";
 			limage2.style.marginleft = "0%";
 		}
-	
-}
+
+	}
 
 
 
