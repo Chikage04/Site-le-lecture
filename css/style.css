@@ -358,6 +358,35 @@
 				margin-top: -185%;
 				margin-left: 0%;
 			}
+			@keyframes partant {
+				0% {
+					transform: translateX(0);
+					opacity: 0.9;
+				}
+				30% {
+					opacity: 0.4;
+				}
+				100% {
+					transform: translateX(+1099px);
+					opacity: 0;
+				}
+			}
+		
+				@keyframes partantback {
+					0% {
+						transform: translateX(0);
+						opacity: 0.9;
+					}
+					30% {
+						transform: translateX(0);
+						opacity: 0.4;
+					}
+		
+					100% {
+						transform: translateX(-1099px);
+						opacity: 0;
+					}
+			}
 
 		}
 
