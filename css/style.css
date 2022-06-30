@@ -367,8 +367,29 @@
 					opacity: 0.4;
 				}
 				100% {
-					transform: translateX(+1099px);
+					transform: translateX(+110%);
 					opacity: 0;
+				}
+			}
+			@keyframes venant {
+				0% {
+					transform: translateX(-100%);
+				}
+	
+				100% {
+					transform: translateX(0);
+				
+				}
+			}
+	
+			
+			@keyframes venantback {
+				0% {
+					transform: translateX(+100%);
+				}
+	
+				100% {
+					transform: translateX(0);
 				}
 			}
 		
@@ -378,12 +399,11 @@
 						opacity: 0.9;
 					}
 					30% {
-						transform: translateX(0);
 						opacity: 0.4;
 					}
 		
 					100% {
-						transform: translateX(-1099px);
+						transform: translateX(-110%);
 						opacity: 0;
 					}
 			}
