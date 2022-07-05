@@ -206,14 +206,20 @@
 	});
 	superbe1.addEventListener('change', () => {
 		console.log('Select change');
-		console.log(superbe.value);
+		console.log(superbe1.value);
 		choice();
 	});
 	superbe2.addEventListener('change', () => {
 		console.log('Select change');
-		console.log(superbe.value);
+		console.log(superbe2.value);
 		choice();
 	});
+
+
+
+
+
+
 
 	function choice() {
 		if (queue_url == 'vol1&total=5') {
@@ -233,6 +239,7 @@
 
 		} else if (queue_url == 'vol1&total=12') {
 			page = document.querySelector("#pages1").value;
+			page = + page;
 		} else {
 			page = document.querySelector("#pages2").value;
 			page = + page;
@@ -248,10 +255,10 @@
 	}
 
 	var urlcourante = document.location.href;
-	
+
 	// Supprimons l'éventuel dernier slash de l'URL
 	var urlcourante = urlcourante.replace(/\/$/, "");
-	
+
 	// Gardons dans la variable queue_url uniquement la portion derrière le dernier slash de urlcourante
 	var queue_url = urlcourante.substring(urlcourante.lastIndexOf("/") + 1);
 
@@ -274,7 +281,7 @@
 		pages2.style.display = 'unset';
 	}
 
-	
+
 
 
 
@@ -312,30 +319,40 @@
 	}
 	function isMobile() { return ('ontouchstart' in document.documentElement); }
 
+	let iszoomable = 'false';
+	if (limage1.style.position = "absolute") {
+		iszoomable = false;
+	} else {
+		iszoomable = true;
+	}
+
+
 	function zoom() {
+		limage1.style.position = "unset";
 		if (isMobile()) return;
+	
+			iszoomable = true;
 
-		if (zoomed == false) {
-			document.getElementsByTagName('img')[0].style.height = '200vh';
-			document.getElementsByTagName('img')[1].style.height = '200vh';
-			document.getElementById('plaque').style.height = '200vh';
-			limage1.style.marginBottom = "-1%";
-			limage2.style.marginTop = "-99%";
-			limage2.style.marginLeft = "0%";
-			zoomed = true;
-			if (limage2.image_url == 'library/color/vol1/jp/A (8).png') {
-				limage2.style.display = 'none';
+				if (zoomed == false) {
+					document.getElementsByTagName('img')[0].style.height = '200vh';
+					document.getElementsByTagName('img')[1].style.height = '200vh';
+					document.getElementById('plaque').style.height = '200vh';
+					limage1.style.marginBottom = "-1%";
+					limage2.style.marginTop = "-99%";
+					limage2.style.marginLeft = "0%";
+					zoomed = true;
 
-			}
-		} else {
-			document.getElementsByTagName('img')[0].style.height = '98vh';
-			document.getElementsByTagName('img')[1].style.height = '98vh';
-			document.getElementById('plaque').style.height = '98vh';
-			limage1.style.marginBottom = "0%";
-			limage2.style.marginTop = "0%";
-			limage2.style.marginLeft = "-35%";
-			zoomed = false;
-		}
+				} else {
+					document.getElementsByTagName('img')[0].style.height = '98vh';
+					document.getElementsByTagName('img')[1].style.height = '98vh';
+					document.getElementById('plaque').style.height = '98vh';
+					limage1.style.marginBottom = "0%";
+					limage2.style.marginTop = "0%";
+					zoomed = false;
+					limage1.style.position = "absolute";
+
+				}
+				
 	}
 	function echelle() {
 
