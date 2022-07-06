@@ -12,7 +12,7 @@
 		}
 
 		img {
-			margin-top: 0px;
+			margin-top: 42px;
 		}
 
 		#plaque {
@@ -90,8 +90,9 @@
 
 		#menu {
 			text-decoration: none;
+			width: 100%;
 			z-index: 999;
-			position: relative;
+			position: fixed;
 			margin: 0;
 			font-size: 33px;
 			padding: 10px;
@@ -131,7 +132,7 @@
 			width: 89px;
 			cursor: pointer;
 			border-radius: 8px;
-			position: relative;
+			position: fixed;
 			z-index: 999;
 			background-color: rgb(180, 214, 228);
 			scrollbar-color: rebeccapurple;
@@ -178,7 +179,7 @@
 			width: 89px;
 			cursor: pointer;
 			border-radius: 8px;
-			position: relative;
+			position: fixed;
 			z-index: 999;
 			scrollbar-color: rebeccapurple;
 			scrollbar-width: thin;
@@ -337,9 +338,10 @@
 			}
 
 			#menu {
-				width: 135%;
+				width: 100%;
 				font-size: 28;
 				padding: 2px;
+				position: fixed;
 			}
 
 			#num {

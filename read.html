@@ -157,6 +157,7 @@
 				document.querySelector("#pages").value = page;
 				document.querySelector("#pages1").value = page;
 				document.querySelector("#pages2").value = page;
+				window.scrollTo(0, 0);
 				setTimeout(function () {
 					isTurnable = true;
 
@@ -183,6 +184,7 @@
 				setTimeout(function () {
 					limage2.style.animation = "1ms";
 				}, 750);
+				window.scrollTo(0, 0);
 				setTimeout(function () {
 					isTurnable = true;
 
@@ -326,33 +328,51 @@
 		iszoomable = true;
 	}
 
+	let img8 = 'false'
+	var page8 = 'file:///D:/Utilisateurs/Benjebara/Downloads/reader-main/library/color/vol1/jp/A%20(8).png';
+	var urlimage2 = limage2.src;
+
+	setInterval(() => {
+		urlimage2 = limage2.src;
+	}, 5);
+	setInterval(() => {
+		if (page8 === urlimage2) {
+			img8 = true;
+			document.getElementsByTagName('img')[0].style.height = '98vh';
+			document.getElementsByTagName('img')[1].style.height = '98vh';
+			document.getElementById('plaque').style.height = '98vh';
+			limage1.style.marginBottom = "0%";
+			zoomed = false;
+			limage1.style.position = "absolute";
+		} else {
+			img8 = false;
+		}
+	}, 5);
 
 	function zoom() {
 		limage1.style.position = "unset";
 		if (isMobile()) return;
-	
-			iszoomable = true;
+		if (img8 === true) return;
+		iszoomable = true;
 
-				if (zoomed == false) {
-					document.getElementsByTagName('img')[0].style.height = '200vh';
-					document.getElementsByTagName('img')[1].style.height = '200vh';
-					document.getElementById('plaque').style.height = '200vh';
-					limage1.style.marginBottom = "-1%";
-					limage2.style.marginTop = "-99%";
-					limage2.style.marginLeft = "0%";
-					zoomed = true;
+		if (zoomed == false) {
+			document.getElementsByTagName('img')[0].style.height = '200vh';
+			document.getElementsByTagName('img')[1].style.height = '200vh';
+			document.getElementById('plaque').style.height = '200vh';
+			limage1.style.marginBottom = "-1%";
+			limage2.style.marginLeft = "0%";
+			zoomed = true;
 
-				} else {
-					document.getElementsByTagName('img')[0].style.height = '98vh';
-					document.getElementsByTagName('img')[1].style.height = '98vh';
-					document.getElementById('plaque').style.height = '98vh';
-					limage1.style.marginBottom = "0%";
-					limage2.style.marginTop = "0%";
-					zoomed = false;
-					limage1.style.position = "absolute";
+		} else {
+			document.getElementsByTagName('img')[0].style.height = '98vh';
+			document.getElementsByTagName('img')[1].style.height = '98vh';
+			document.getElementById('plaque').style.height = '98vh';
+			limage1.style.marginBottom = "0%";
+			zoomed = false;
+			limage1.style.position = "absolute";
 
-				}
-				
+		}
+
 	}
 	function echelle() {
 
@@ -381,6 +401,7 @@
 			switchlang();
 		}
 	});
+
 
 
 
