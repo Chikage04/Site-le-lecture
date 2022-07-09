@@ -87,6 +87,9 @@
 			top: 93%;
 			cursor: pointer;
 		}
+		#num:hover{
+			opacity: 100%!important;
+		}
 
 		#menu {
 			text-decoration: none;
@@ -367,6 +370,7 @@
 				left: 89%;
 				top: 89%;
 			}
+			
 
 			.numero {
 
