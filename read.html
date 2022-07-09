@@ -416,16 +416,30 @@
 	var nice = document.querySelector("#off");
 	function calme() {
 		if (etatoff === true) {
-			
-			lemenu.style.transform = "translateY(-220%)";
+			if (isMobile()){
+				lemenu.style.transform = "translateY(-220%)";
+			nice.style.transform = "translateY(255%)";
+			superbe.style.transform = "translateY(-220%)";
+			superbe1.style.transform = "translateY(-220%)";
+			superbe2.style.transform = "translateY(-220%)";
+			document.getElementsByTagName('img')[0].style.marginTop = '30%';
+			document.getElementsByTagName('img')[1].style.marginTop = '30%';
+			nice.style.opacity = "30%"
+			document.getElementById('num').style.opacity = "50%";
+			etatoff = false;
+			} else{
+				lemenu.style.transform = "translateY(-220%)";
 			nice.style.transform = "translateY(340%)";
 			superbe.style.transform = "translateY(-220%)";
 			superbe1.style.transform = "translateY(-220%)";
 			superbe2.style.transform = "translateY(-220%)";
-			document.getElementsByTagName('img')[0].style.marginTop = '10px';
-			document.getElementsByTagName('img')[1].style.marginTop = '10px';
+			document.getElementsByTagName('img')[0].style.marginTop = '9px';
+			document.getElementsByTagName('img')[1].style.marginTop = '9px';
 			nice.style.opacity = "30%"
+			document.getElementById('num').style.opacity = "50%";
 			etatoff = false;
+			}
+			
 
 		} else {
 			lemenu.style.transform = "translateY(0%)";
