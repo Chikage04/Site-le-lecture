@@ -99,8 +99,7 @@
 			color: rgb(0, 140, 255);
 			background: hsl(198, 100%, 14%);
 			box-shadow: 0 5px 10px 0 rgba(0, 73, 150, 0.762);
-			display: flex;
-			justify-content: space-around;
+			text-align: center;
 		}
 
 		#menu:hover {
@@ -115,7 +114,10 @@
 		}
 
 		#back {
-			left: 30%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 		}
 
 		.numero {
@@ -253,12 +255,15 @@
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
-		.image1{
+
+		.image1 {
 			transition: all 0.001s;
 		}
-		.image2{
+
+		.image2 {
 			transition: all 0.001s;
 		}
+
 		@keyframes venant {
 			0% {
 				transform: translateX(-999px);
@@ -266,7 +271,7 @@
 
 			100% {
 				transform: translateX(0);
-			
+
 			}
 		}
 
@@ -281,6 +286,7 @@
 				opacity: 0;
 			}
 		}
+
 		@keyframes venantback {
 			0% {
 				transform: translateX(+999px);
@@ -290,16 +296,28 @@
 				transform: translateX(0);
 			}
 		}
-			@keyframes partantback {
-				0% {
-					transform: translateX(0);
-					opacity: 1;
-				}
-	
-				100% {
-					transform: translateX(-1099px);
-					opacity: 0;
-				}
+
+		@keyframes partantback {
+			0% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+
+			100% {
+				transform: translateX(-1099px);
+				opacity: 0;
+			}
+		}
+
+		#off {
+			float: left;
+			font-size: 16px;
+			margin-left: 5%;
+			cursor: pointer;
+		}
+
+		#off:hover {
+			opacity: 100%!important;
 		}
 
 
@@ -355,61 +373,68 @@
 				left: 99%;
 				top: 7px;
 			}
-			.image1{
+
+			.image1 {
 				margin-left: 0%;
-				
+
 			}
-			.image2{
+
+			.image2 {
 				margin-left: 0%;
 			}
+
 			@keyframes partant {
 				0% {
 					transform: translateX(0);
 					opacity: 0.9;
 				}
+
 				30% {
 					opacity: 0.4;
 				}
+
 				100% {
 					transform: translateX(+110%);
 					opacity: 0;
 				}
 			}
+
 			@keyframes venant {
 				0% {
 					transform: translateX(-100%);
 				}
-	
+
 				100% {
 					transform: translateX(0);
-				
+
 				}
 			}
-	
-			
+
+
 			@keyframes venantback {
 				0% {
 					transform: translateX(+100%);
 				}
-	
+
 				100% {
 					transform: translateX(0);
 				}
 			}
-		
-				@keyframes partantback {
-					0% {
-						transform: translateX(0);
-						opacity: 0.9;
-					}
-					30% {
-						opacity: 0.4;
-					}
-		
-					100% {
-						transform: translateX(-110%);
-						opacity: 0;
-					}
+
+			@keyframes partantback {
+				0% {
+					transform: translateX(0);
+					opacity: 0.9;
+				}
+
+				30% {
+					opacity: 0.4;
+				}
+
+				100% {
+					transform: translateX(-110%);
+					opacity: 0;
+				}
 			}
 
 		}
@@ -420,4 +445,3 @@
 			}
 
 		}
-		

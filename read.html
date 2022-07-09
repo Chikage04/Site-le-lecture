@@ -16,7 +16,12 @@
 	<span onclick="plusdix()" id='num'>1 </span>
 
 	<div id='menu'>
-		<a id=back href="index.html"> Back</a>
+		<a id='back' href="index.html"> Back</a>
+
+
+		<a id='off' onclick='calme()'> Cacher<br>l'interface</a>
+
+
 	</div>
 	<div class="numero">
 
@@ -110,6 +115,7 @@
 
 	const limage1 = document.querySelector(".image1")
 	const limage2 = document.querySelector(".image2")
+	const lemenu = document.querySelector("#menu")
 	var zoomed = false;
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
@@ -186,8 +192,8 @@
 				setTimeout(function () {
 					limage2.style.animation = "1ms";
 				}, 750);
-				
-			
+
+
 				setTimeout(function () {
 					isTurnable = true;
 					scrollTo(600, 0);
@@ -406,7 +412,33 @@
 		}
 	});
 
+	var etatoff = true;
+	var nice = document.querySelector("#off");
+	function calme() {
+		if (etatoff === true) {
+			
+			lemenu.style.transform = "translateY(-220%)";
+			nice.style.transform = "translateY(340%)";
+			superbe.style.transform = "translateY(-220%)";
+			superbe1.style.transform = "translateY(-220%)";
+			superbe2.style.transform = "translateY(-220%)";
+			document.getElementsByTagName('img')[0].style.marginTop = '10px';
+			document.getElementsByTagName('img')[1].style.marginTop = '10px';
+			nice.style.opacity = "30%"
+			etatoff = false;
 
+		} else {
+			lemenu.style.transform = "translateY(0%)";
+			nice.style.transform = "translateY(0%)";
+			superbe.style.transform = "translateY(0%)";
+			superbe1.style.transform = "translateY(0%)";
+			superbe2.style.transform = "translateY(0%)";
+			document.getElementsByTagName('img')[0].style.marginTop = '42px';
+			document.getElementsByTagName('img')[1].style.marginTop = '42px';
+			nice.style.opacity = "100%"
+			etatoff = true;
+		}
+	}
 
 
 </script>
