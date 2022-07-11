@@ -96,6 +96,33 @@
 			display: flex;
 			font-size: 40px;
 		}
+		.principe ul {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			justify-content: flex-start;
+			margin: 0;
+			list-style: none;
+			background: rgb(81, 135, 244);
+		}
+
+		.principe ul li {
+			width: 110px;
+			text-align: center;
+		}
+
+		.principe ul img {
+			width: 30px;
+		}
+		#credit {
+			transform: translate(343%);
+			margin: 0px;
+			width: 151px;
+			padding: 0px;
+		}
 
 
 		@media screen and (max-width: 1090px) {
@@ -121,7 +148,14 @@
 
 
 			<center>
-				<h2>Crédit !</h2>
+				<div class="principe">
+					<ul>
+						<li><a href="index.html">One shot</a></li>
+						<li>
+							<h2 id="credit">Crédit !</h2>
+						</li>
+					</ul>
+				</div>
 
 				<div class='pika2'>
 					<h3>Les info trop chouette !!</h3>

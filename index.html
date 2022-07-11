@@ -130,7 +130,7 @@
 
 		.box img {
 			width: 300px;
-			transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+			transition: all .5s cubic-bezier(0.49, 0.04, 0.46, 1.97);
 
 		}
 
@@ -138,10 +138,7 @@
 		.box img:hover {
 
 			color: rgb(90, 109, 255);
-			box-shadow: 0 0px 30px 0 rgba(29, 160, 247, 0.789);
-
-
-
+			box-shadow: 0 0px 30px 10px rgba(29, 160, 247, 0.789);
 		}
 
 		.sous-pages {
@@ -420,6 +417,9 @@
 		.principe ul li {
 			width: 110px;
 			text-align: center;
+			padding-bottom: 4px;
+			padding-top: 4px;
+
 		}
 
 		.principe ul img {
@@ -431,6 +431,11 @@
 			margin: 0px;
 			width: 151px;
 			padding: 0px;
+
+		}
+
+		#corp {
+			font-size: 20px;
 		}
 
 		.texte {
@@ -642,7 +647,7 @@
 
 			#credit {
 				transform: translate(30%);
-				
+
 			}
 
 		}
@@ -659,7 +664,7 @@
 
 				<div class="principe">
 					<ul>
-						<li><a href="credit.html">Chikage corporation</a></li>
+						<li><a id="corp" href="credit.html">Chikage corporation</a></li>
 						<li>
 							<h2 id="credit">One Shot</h2>
 						</li>
