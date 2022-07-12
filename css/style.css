@@ -87,8 +87,9 @@
 			top: 93%;
 			cursor: pointer;
 		}
-		#num:hover{
-			opacity: 100%!important;
+
+		#num:hover {
+			opacity: 100% !important;
 		}
 
 		#menu {
@@ -130,45 +131,6 @@
 			z-index: 1999;
 		}
 
-		#pages {
-			padding: 3px;
-			font-size: 17px;
-			font-family: 'Contrail One', cursive;
-			width: 89px;
-			cursor: pointer;
-			border-radius: 8px;
-			position: fixed;
-			z-index: 999;
-			background-color: rgb(180, 214, 228);
-			scrollbar-color: rebeccapurple;
-			scrollbar-width: thin;
-
-		}
-
-		#pages::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		/* Track */
-		#pages::-webkit-scrollbar-track {
-			background: #f1f1f1;
-		}
-
-		/* Handle */
-		#pages::-webkit-scrollbar-thumb {
-			background: rgb(133, 160, 255);
-		}
-
-		/* Handle on hover */
-		#pages::-webkit-scrollbar-thumb:hover {
-			background: rgb(101, 152, 255);
-		}
-
-		pages option {
-			margin: 40px;
-			background: rgba(0, 0, 0, 0.3);
-			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
-		}
 
 		option:hover {
 			background: rgb(143, 179, 255);
@@ -176,50 +138,31 @@
 		}
 
 
-		#pages1 {
-			padding: 3px;
-			font-size: 17px;
-			font-family: 'Contrail One', cursive;
-			background-color: rgb(180, 214, 228);
-			width: 89px;
-			cursor: pointer;
-			border-radius: 8px;
-			position: fixed;
-			z-index: 999;
-			scrollbar-color: rebeccapurple;
-			scrollbar-width: thin;
 
-		}
 
-		#pages1::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		/* Track */
-		#pages1::-webkit-scrollbar-track {
-			background: #f1f1f1;
-		}
-
-		/* Handle */
-		#pages1::-webkit-scrollbar-thumb {
-			background: rgb(133, 160, 255);
-		}
-
-		/* Handle on hover */
-		#pages1::-webkit-scrollbar-thumb:hover {
-			background: rgb(101, 152, 255);
-		}
-
-		pages1 option {
-			margin: 40px;
-			background: rgba(0, 0, 0, 0.3);
-			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
+		#up {
+			margin-left: 30px;
+			height: 35px;
 		}
 
 
+		.choix {
+			display: flex;
+			margin-left: 15px;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			align-items: flex-start;
+		}
 
+		.anime {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 
-		#pages2 {
+		}
+
+		.option {
 			padding: 3px;
 			font-size: 17px;
 			font-family: 'Contrail One', cursive;
@@ -231,33 +174,56 @@
 			background-color: rgb(180, 214, 228);
 			scrollbar-color: rebeccapurple;
 			scrollbar-width: thin;
+			float: left;
+			margin-left: 30px;
 
 		}
+		#anim {
+			padding: 3px;
+			font-size: 17px;
+			font-family: 'Contrail One', cursive;
+			width: 89px;
+			cursor: pointer;
+			border-radius: 8px;
+			position: relative;
+			z-index: 999;
+			background-color: rgb(145, 0, 5);
+			scrollbar-color: rebeccapurple;
+			scrollbar-width: thin;
+			float: left;
+			margin-left: 30px;
 
-		#pages2::-webkit-scrollbar {
+		}
+		.choisir{
+			color: white;
+		}
+
+		.option::-webkit-scrollbar {
 			width: 10px;
 		}
 
 		/* Track */
-		#pages2::-webkit-scrollbar-track {
+		.option::-webkit-scrollbar-track {
 			background: #f1f1f1;
 		}
 
 		/* Handle */
-		#pages2::-webkit-scrollbar-thumb {
+		.option::-webkit-scrollbar-thumb {
 			background: rgb(133, 160, 255);
 		}
 
 		/* Handle on hover */
-		#pages2::-webkit-scrollbar-thumb:hover {
+		.option::-webkit-scrollbar-thumb:hover {
 			background: rgb(101, 152, 255);
 		}
 
-		pages2 option {
+		option option {
 			margin: 40px;
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
 		}
+
+
 
 		.image1 {
 			transition: all 0.001s;
@@ -267,6 +233,16 @@
 			transition: all 0.001s;
 		}
 
+		.aide {
+			width: 400px;
+			height: 65px;
+			position: fixed;
+			background-color: #000a1b;
+			left: 3%;
+			TOP: 10%;
+			z-index: 9999;
+			border-radius: 20px;
+		}
 		@keyframes venant {
 			0% {
 				transform: translateX(-999px);
@@ -311,6 +287,7 @@
 				opacity: 0;
 			}
 		}
+		
 
 		#off {
 			float: left;
@@ -320,7 +297,7 @@
 		}
 
 		#off:hover {
-			opacity: 100%!important;
+			opacity: 100% !important;
 		}
 
 
@@ -370,7 +347,7 @@
 				left: 89%;
 				top: 89%;
 			}
-			
+
 
 			.numero {
 
