@@ -132,7 +132,7 @@
 		}
 
 
-		option:hover {
+		option:hover,option2:hover {
 			background: rgb(143, 179, 255);
 			color: rgb(0, 0, 0);
 		}
@@ -162,7 +162,8 @@
 
 		}
 
-		.option {
+		
+		.option, .option2 {
 			padding: 3px;
 			font-size: 17px;
 			font-family: 'Contrail One', cursive;
@@ -177,6 +178,9 @@
 			float: left;
 			margin-left: 30px;
 
+		}
+		.option2{
+			position: fixed;
 		}
 		#anim {
 			padding: 3px;
@@ -198,26 +202,26 @@
 			color: white;
 		}
 
-		.option::-webkit-scrollbar {
+		.option::-webkit-scrollbar,.option2::-webkit-scrollbar {
 			width: 10px;
 		}
 
 		/* Track */
-		.option::-webkit-scrollbar-track {
+		.option::-webkit-scrollbar-track, .option2::-webkit-scrollbar-track {
 			background: #f1f1f1;
 		}
 
 		/* Handle */
-		.option::-webkit-scrollbar-thumb {
+		.option::-webkit-scrollbar-thumb,.option2::-webkit-scrollbar-thumb {
 			background: rgb(133, 160, 255);
 		}
 
 		/* Handle on hover */
-		.option::-webkit-scrollbar-thumb:hover {
+		.option::-webkit-scrollbar-thumb:hover,.option2::-webkit-scrollbar-thumb:hover {
 			background: rgb(101, 152, 255);
 		}
 
-		option option {
+		option option,option2 option2 {
 			margin: 40px;
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
