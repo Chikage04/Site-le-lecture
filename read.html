@@ -122,7 +122,7 @@
 <script>
 	var lang = 'jp';
 	var page = 1;
-	var pageBIS = 2;
+	var pageBIS = 1;
 
 
 
@@ -488,7 +488,9 @@
 	}
 
 	let img8 = 'false'
+	let img7 = 'false'
 	var page8 = 'https://chikage04.github.io/scan/library/color/vol1/jp/A%20(8).png';
+	var page7 = 'file:///D:/Download/reader-main/library/color/vol1/jp/A%20(7).png';
 	var urlimage2 = limage2.src;
 
 	setInterval(() => {
@@ -580,6 +582,7 @@
 				laide.style.display = 'none';
 				document.getElementById('num').style.opacity = "50%";
 				document.getElementById('num').style.top = "90%";
+				document.getElementById('utile').style.top = '-93%'
 				etatoff = false;
 			} else {
 				lemenu.style.transform = "translateY(-220%)";
@@ -591,7 +594,8 @@
 				document.getElementsByTagName('img')[1].style.marginTop = '9px';
 				nice.style.opacity = "30%"
 				laide.style.display = 'none';
-				document.getElementById('num').style.opacity = "100%";
+				document.getElementById('num').style.opacity = "50%";
+				document.getElementById('utile').style.top = '-93%'
 				etatoff = false;
 			}
 
@@ -605,6 +609,8 @@
 			document.getElementsByTagName('img')[0].style.marginTop = '42px';
 			document.getElementsByTagName('img')[1].style.marginTop = '42px';
 			nice.style.opacity = "100%"
+			document.getElementById('num').style.opacity = "100%";
+			document.getElementById('utile').style.top = '-87%'
 			etatoff = true;
 		}
 	}
@@ -637,11 +643,20 @@
 	}
 	setInterval(() => {
 		if (etatanime == 'true') {
-			document.getElementById('utile').style.display = 'none'
+			document.getElementById('utile').style.display = 'none';
 		} else {
-			document.getElementById('utile').style.display = 'unset'
+			document.getElementById('utile').style.display = 'unset';
 		}
 	}, 5);
+
+	setInterval(() => {
+		if (page7 === urlimage2) {
+			img7 = true;
+		} else{
+			img7 = false;
+		}
+	}, 5);
+	
 
 
 
