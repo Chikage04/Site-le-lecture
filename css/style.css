@@ -191,7 +191,7 @@
 			border-radius: 8px;
 			position: relative;
 			z-index: 999;
-			background-color: rgb(145, 0, 5);
+			background-color: green;
 			scrollbar-color: rebeccapurple;
 			scrollbar-width: thin;
 			float: left;
@@ -221,7 +221,7 @@
 			background: rgb(101, 152, 255);
 		}
 
-		option option,option2 option2 {
+		option opt,option2 option2 {
 			margin: 40px;
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
@@ -246,6 +246,12 @@
 			TOP: 10%;
 			z-index: 9999;
 			border-radius: 20px;
+		}
+		#utile{
+			position: absolute;
+			top: -87%;
+			width: 470px;
+			
 		}
 		@keyframes venant {
 			0% {
