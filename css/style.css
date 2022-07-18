@@ -25,7 +25,7 @@
 		}
 
 		html {
-			background: #222;
+			background: #111;
 			overflow-x: hidden;
 		}
 
@@ -248,7 +248,7 @@
 			border-radius: 20px;
 		}
 		#utile{
-			position: absolute;
+			position: fixed;
 			top: -87%;
 			width: 470px;
 			opacity: 1%;
