@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<div class="sous-page">
 	<span onclick="plusdix()" id='num'>1 </span>
 
 	<div id='menu'>
@@ -109,6 +109,7 @@
 					On
 				</button>
 			</div>
+			
 		</div>
 	</div>
 	<div id='plaque' onclick='zoom()'></div>
@@ -117,7 +118,7 @@
 	<img id='utile' src=''>
 	<div id='left' onclick='change("+")' class='button'></div>
 	<div id='right' onclick='change("-")' class='button'></div>
-
+</div>
 </body>
 <script>
 	var lang = 'jp';
@@ -655,6 +656,13 @@
 		} else{
 			img7 = false;
 		}
+		if(img7 == true){
+			document.getElementById('utile').style.top = '-43%';
+			document.getElementById('utile').style.width = '1000px';
+		} else {
+			document.getElementById('utile').style.width = '470px';
+		}
+		
 	}, 5);
 	
 
