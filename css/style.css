@@ -127,7 +127,7 @@
 		.numero {
 			position: absolute;
 			left: 69%;
-			top: 14px;
+			top: 11px;
 			z-index: 1999;
 		}
 
@@ -143,6 +143,7 @@
 		#up {
 			margin-left: 30px;
 			height: 35px;
+			top: 1px;
 		}
 
 
@@ -164,7 +165,7 @@
 
 		
 		.option, .option2 {
-			padding: 3px;
+			padding: 5px;
 			font-size: 17px;
 			font-family: 'Contrail One', cursive;
 			width: 89px;
@@ -181,6 +182,7 @@
 		}
 		.option2{
 			position: fixed;
+			
 		}
 		#anim {
 			padding: 3px;
@@ -196,6 +198,7 @@
 			scrollbar-width: thin;
 			float: left;
 			margin-left: 30px;
+			color: white;
 
 		}
 		.choisir{
@@ -239,7 +242,7 @@
 
 		.aide {
 			width: 400px;
-			height: 65px;
+			height: 125px;
 			position: fixed;
 			background-color: #000a1b;
 			left: 3%;
@@ -253,6 +256,10 @@
 			width: 470px;
 			opacity: 1%;
 			
+		}
+		#sombre{
+			background-color: darkmagenta;
+			color: white;
 		}
 		@keyframes venant {
 			0% {
@@ -305,6 +312,7 @@
 			font-size: 16px;
 			margin-left: 3%;
 			cursor: pointer;
+			font-weight: bold;
 		}
 
 		#off:hover {
@@ -363,7 +371,7 @@
 			.numero {
 
 				left: 99%;
-				top: 7px;
+				top: 3px;
 			}
 
 			.image1 {
