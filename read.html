@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" as="font"
+		type="font/woff2" crossorigin>
 	<link rel="icon" type="image/x-icon" href="library/logoo.ico" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
 	<title>Regardez Gintama</title>
@@ -352,10 +354,6 @@
 
 
 
-
-
-
-
 	function choice() {
 		if (queue_url == 'vol1&total=5') {
 			var truc = document.querySelector("#pages").value;
@@ -564,6 +562,52 @@
 		}
 	});
 
+	document.getElementById('left').addEventListener('click', event => {
+
+		if (laide.style.display == 'unset') {
+			laide.style.display = 'none'
+		}
+		if (document.getElementById('pages').size == total
+			|| document.getElementById('pages1').size == total
+			|| document.getElementById('pages2').size == total) {
+			changesize2()
+		} else if (document.getElementById('pages').size == '10'
+			|| document.getElementById('pages1').size == '10'
+			|| document.getElementById('pages2').size == '10') {
+			changesize2()
+		}
+	});
+	document.getElementById('right').addEventListener('click', event => {
+
+		if (laide.style.display == 'unset') {
+			laide.style.display = 'none'
+		}
+		if (document.getElementById('pages').size == total
+			|| document.getElementById('pages1').size == total
+			|| document.getElementById('pages2').size == total) {
+			changesize2()
+		} else if (document.getElementById('pages').size == '10'
+			|| document.getElementById('pages1').size == '10'
+			|| document.getElementById('pages2').size == '10') {
+			changesize2()
+		}
+	});
+	document.getElementById('plaque').addEventListener('click', event => {
+
+		if (laide.style.display == 'unset') {
+			laide.style.display = 'none'
+		}
+		if (document.getElementById('pages').size == total
+			|| document.getElementById('pages1').size == total
+			|| document.getElementById('pages2').size == total) {
+			changesize2()
+		} else if (document.getElementById('pages').size == '10'
+			|| document.getElementById('pages1').size == '10'
+			|| document.getElementById('pages2').size == '10') {
+			changesize2()
+		}
+	});
+
 	var etatoff = true;
 	var nice = document.querySelector("#off");
 	function calme() {
@@ -582,6 +626,7 @@
 				document.getElementById('num').style.opacity = "50%";
 				document.getElementById('num').style.top = "90%";
 				document.getElementById('utile').style.top = '-93%'
+				changesize2()
 				etatoff = false;
 			} else {
 				lemenu.style.transform = "translateY(-220%)";
@@ -595,6 +640,7 @@
 				laide.style.display = 'none';
 				document.getElementById('num').style.opacity = "50%";
 				document.getElementById('utile').style.top = '-93%'
+				changesize2()
 				etatoff = false;
 			}
 
@@ -618,8 +664,12 @@
 	function aide() {
 		if (laide && laide.style.display === "unset") {
 			laide.style.display = 'none';
+
 		} else {
-			laide.style.display = 'unset';
+			setTimeout(() => {
+				laide.style.display = 'unset';
+			}, 1);
+
 		}
 
 	}
