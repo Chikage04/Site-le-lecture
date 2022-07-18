@@ -104,12 +104,17 @@
 	<div class="aide">
 		<div class="choix">
 			<div class="anime">
-				<h4 class="choisir">Désactiver les animations:</h4>
+				<h4 class="choisir">Animations:</h4>
 				<button class='option' id="anim" onclick='stopanime()'>
 					On
 				</button>
 			</div>
-			
+			<div class="anime">
+				<h4 class="choisir">Assombrir les images:</h4>
+				<button class='option' id="sombre" onclick='assombrir()'>
+					100%
+				</button>
+			</div>
 		</div>
 	</div>
 	<div id='plaque' onclick='zoom()'></div>
@@ -625,8 +630,10 @@
 		}
 
 	}
+
 	var anim = document.querySelector("#anim")
 	var etatanime = 'true';
+
 	function stopanime() {
 		if (etatanime == 'true') {
 			etatanime = 'false';
@@ -664,7 +671,30 @@
 		}
 		
 	}, 5);
-	
+	var dark = document.querySelector("#sombre")
+	var sombre = 100;
+	function assombrir() {
+		if (sombre == 100) {
+			sombre = 80;
+			dark.textContent = '80%';
+			dark.style.filter = 'brightness(85%)';
+			document.getElementsByTagName('img')[0].style.filter = 'brightness(80%)';
+			document.getElementsByTagName('img')[1].style.filter = 'brightness(80%)';
+		} else if(sombre == 80){
+			sombre = 50;
+			document.getElementsByTagName('img')[0].style.filter = 'brightness(50%)';
+			document.getElementsByTagName('img')[1].style.filter = 'brightness(50%)';
+			dark.textContent = '50%';
+			dark.style.filter = 'brightness(70%)';
+		} else{
+			sombre = 100;
+			document.getElementsByTagName('img')[0].style.filter = 'brightness(100%)';
+			document.getElementsByTagName('img')[1].style.filter = 'brightness(100%)';
+			dark.textContent = '100%';
+			dark.style.filter = 'brightness(100%)';
+		}
+
+	}
 
 
 
