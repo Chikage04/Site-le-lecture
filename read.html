@@ -121,8 +121,8 @@
 		<img class='image1' id='limage' src=''>
 		<img class='image2' id='limage' src=''>
 		<img id='utile' src=''>
-		<div id='left' onclick='change("+")' class='button'></div>
-		<div id='right' onclick='change("-")' class='button'></div>
+		<div id='left' onclick='change("-")' class='button'></div>
+		<div id='right' onclick='change("+")' class='button'></div>
 	</div>
 </body>
 <script>
@@ -154,11 +154,6 @@
 
 
 
-	setInterval(() => {
-		if (limage1.animationPlayState == "running") {
-			console.log("Désolé ! preventDefault() ne vous laissera pas cocher ceci.");
-		}
-	}, 5);
 
 
 	let isTurnable = 'true'
@@ -171,13 +166,13 @@
 					isTurnable = false;
 					if (etatanime == 'true') {
 						setTimeout(function () {
-							limage1.style.animation = "partant 750ms";
+							limage1.style.animation = "partantback 750ms";
 						}, 1);
 						setTimeout(function () {
 							limage1.style.animation = "1ms";
 						}, 780);
 						setTimeout(function () {
-							limage2.style.animation = "venant  730ms";
+							limage2.style.animation = "venantback  730ms";
 
 						}, 1);
 						setTimeout(function () {
@@ -196,13 +191,13 @@
 						}, 990);
 					} else {
 						setTimeout(function () {
-							limage1.style.animation = "partant 750ms";
+							limage1.style.animation = "partantback 750ms";
 						}, 1);
 						setTimeout(function () {
 							limage1.style.animation = "1ms";
 						}, 780);
 						setTimeout(function () {
-							limage2.style.animation = "venant  730ms";
+							limage2.style.animation = "venantback  730ms";
 
 						}, 1);
 						setTimeout(function () {
@@ -241,12 +236,12 @@
 						document.querySelector("#pages").value = page;
 						document.querySelector("#pages1").value = page;
 						document.querySelector("#pages2").value = page;
-						limage1.style.animation = "partantback 750ms";
+						limage1.style.animation = "partant 750ms";
 						setTimeout(function () {
 							limage1.style.animation = "1ms";
 						}, 770);
 						setTimeout(function () {
-							limage2.style.animation = "venantback  730ms";
+							limage2.style.animation = "venant  730ms";
 						}, 1);
 						setTimeout(function () {
 							limage2.style.animation = "1ms";
@@ -264,12 +259,12 @@
 						document.querySelector("#pages").value = page;
 						document.querySelector("#pages1").value = page;
 						document.querySelector("#pages2").value = page;
-						limage1.style.animation = "partantback 750ms";
+						limage1.style.animation = "partant 750ms";
 						setTimeout(function () {
 							limage1.style.animation = "1ms";
 						}, 770);
 						setTimeout(function () {
-							limage2.style.animation = "venantback  730ms";
+							limage2.style.animation = "venant  730ms";
 						}, 1);
 						setTimeout(function () {
 							limage2.style.animation = "1ms";
@@ -479,7 +474,7 @@
 		} else if (page <= total - 9) {
 			page = page + 9;
 		}
-		change('+');
+		change('-');
 
 	}
 	function isMobile() { return ('ontouchstart' in document.documentElement); }
@@ -557,11 +552,11 @@
 
 	document.addEventListener("keydown", (e) => {
 		if (e.keyCode == '37') {
-			change('+');
+			change('-');
 		}
 
 		if (e.keyCode == '39') {
-			change('-');
+			change('+');
 		}
 
 		if (e.keyCode == '13') {
