@@ -107,7 +107,7 @@
 		}
 
 		#menu:hover {
-			
+
 			color: rgb(0, 89, 255);
 		}
 
@@ -131,7 +131,8 @@
 		}
 
 
-		option:hover,option2:hover {
+		option:hover,
+		option2:hover {
 			background: rgb(143, 179, 255);
 			color: rgb(0, 0, 0);
 		}
@@ -162,8 +163,9 @@
 
 		}
 
-		
-		.option, .option2 {
+
+		.option,
+		.option2 {
 			padding: 5px;
 			font-size: 17px;
 			font-family: 'Contrail One', cursive;
@@ -179,10 +181,12 @@
 			margin-left: 30px;
 
 		}
-		.option2{
+
+		.option2 {
 			position: fixed;
-			
+
 		}
+
 		#anim {
 			padding: 3px;
 			font-size: 17px;
@@ -200,30 +204,36 @@
 			color: white;
 
 		}
-		.choisir{
+
+		.choisir {
 			color: white;
 		}
 
-		.option::-webkit-scrollbar,.option2::-webkit-scrollbar {
+		.option::-webkit-scrollbar,
+		.option2::-webkit-scrollbar {
 			width: 10px;
 		}
 
 		/* Track */
-		.option::-webkit-scrollbar-track, .option2::-webkit-scrollbar-track {
+		.option::-webkit-scrollbar-track,
+		.option2::-webkit-scrollbar-track {
 			background: #f1f1f1;
 		}
 
 		/* Handle */
-		.option::-webkit-scrollbar-thumb,.option2::-webkit-scrollbar-thumb {
+		.option::-webkit-scrollbar-thumb,
+		.option2::-webkit-scrollbar-thumb {
 			background: rgb(133, 160, 255);
 		}
 
 		/* Handle on hover */
-		.option::-webkit-scrollbar-thumb:hover,.option2::-webkit-scrollbar-thumb:hover {
+		.option::-webkit-scrollbar-thumb:hover,
+		.option2::-webkit-scrollbar-thumb:hover {
 			background: rgb(101, 152, 255);
 		}
 
-		option opt,option2 option2 {
+		option opt,
+		option2 option2 {
 			margin: 40px;
 			background: rgba(0, 0, 0, 0.3);
 			text-shadow: 0 1px 0 rgba(201, 8, 8, 0.852);
@@ -249,17 +259,20 @@
 			z-index: 9999;
 			border-radius: 20px;
 		}
-		#utile{
+
+		#utile {
 			position: fixed;
 			top: -87%;
 			width: 470px;
 			opacity: 1%;
-			
+
 		}
-		#sombre{
+
+		#sombre {
 			background-color: darkmagenta;
 			color: white;
 		}
+
 		@keyframes venant {
 			0% {
 				transform: translateX(-999px);
@@ -304,7 +317,7 @@
 				opacity: 0;
 			}
 		}
-		
+
 
 		#off {
 			float: left;
@@ -434,6 +447,31 @@
 					transform: translateX(-110%);
 					opacity: 0;
 				}
+			}
+
+			#back {
+				font-size: 25px;
+			}
+
+			#off {
+				font-size: 14px;
+				margin-left: 2%;
+			}
+			#up{
+				top: 1px;
+				margin-left: 20px!important;
+			}
+
+			.option,.option2 {
+				font-size: 14px;
+				height: 30px!important;
+				width: 65px;
+				padding: 0px;
+				margin-left: -130px;
+				top: 2px;
+				padding-top: 1px;
+
+
 			}
 
 		}
