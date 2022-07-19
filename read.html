@@ -138,8 +138,13 @@
 	var zoomed = false;
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
+	if (isMobile()) {
+		document.getElementsByTagName('img')[0].style.height = '65vh';
+		document.getElementsByTagName('img')[1].style.height = '65vh';
+	} else{
 	document.getElementsByTagName('img')[0].style.height = '98vh';
 	document.getElementsByTagName('img')[1].style.height = '98vh';
+	}
 	var windowX = window.innerWidth;
 	if (windowX < 612) {
 		document.getElementById('right').style.opacity = '0%';
