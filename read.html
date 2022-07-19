@@ -139,11 +139,11 @@
 	var total = $_GET('total');
 	var niconiconii = $_GET('niconiconii');
 	if (isMobile()) {
-		document.getElementsByTagName('img')[0].style.height = '65vh';
-		document.getElementsByTagName('img')[1].style.height = '65vh';
-	} else{
-	document.getElementsByTagName('img')[0].style.height = '98vh';
-	document.getElementsByTagName('img')[1].style.height = '98vh';
+		document.getElementsByTagName('img')[0].style.height = '68vh';
+		document.getElementsByTagName('img')[1].style.height = '68vh';
+	} else {
+		document.getElementsByTagName('img')[0].style.height = '98vh';
+		document.getElementsByTagName('img')[1].style.height = '98vh';
 	}
 	var windowX = window.innerWidth;
 	if (windowX < 612) {
@@ -501,9 +501,15 @@
 	setInterval(() => {
 		if (page8 === urlimage2) {
 			img8 = true;
-			document.getElementsByTagName('img')[0].style.height = '98vh';
-			document.getElementsByTagName('img')[1].style.height = '98vh';
-			document.getElementById('plaque').style.height = '98vh';
+			if (isMobile()) {
+				document.getElementsByTagName('img')[0].style.height = '68vh';
+				document.getElementsByTagName('img')[1].style.height = '68vh';
+			} else {
+				document.getElementsByTagName('img')[0].style.height = '98vh';
+				document.getElementsByTagName('img')[1].style.height = '98vh';
+				document.getElementById('plaque').style.height = '98vh';
+			}
+
 			limage1.style.marginBottom = "0%";
 			zoomed = false;
 			limage1.style.position = "absolute";
@@ -529,9 +535,14 @@
 			limage1.style.position = "absolute";
 
 		} else {
-			document.getElementsByTagName('img')[0].style.height = '98vh';
-			document.getElementsByTagName('img')[1].style.height = '98vh';
-			document.getElementById('plaque').style.height = '98vh';
+			if (isMobile()) {
+				document.getElementsByTagName('img')[0].style.height = '68vh';
+				document.getElementsByTagName('img')[1].style.height = '68vh';
+			} else {
+				document.getElementsByTagName('img')[0].style.height = '98vh';
+				document.getElementsByTagName('img')[1].style.height = '98vh';
+				document.getElementById('plaque').style.height = '98vh';
+			}
 			limage1.style.marginBottom = "0%";
 			zoomed = false;
 			limage1.style.position = "absolute";
