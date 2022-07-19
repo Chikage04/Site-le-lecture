@@ -374,9 +374,12 @@
 			}
 
 			#num {
-				font-size: 27px;
-				left: 89%;
+				font-size: 21px;
+				left: 86%;
 				top: 89%;
+				padding: 4px;
+				padding-left: 8px;
+				padding-right: 8px;
 			}
 
 
@@ -457,14 +460,16 @@
 				font-size: 14px;
 				margin-left: 2%;
 			}
-			#up{
+
+			#up {
 				top: 1px;
-				margin-left: 20px!important;
+				margin-left: 20px !important;
 			}
 
-			.option,.option2 {
+			.option,
+			.option2 {
 				font-size: 14px;
-				height: 30px!important;
+				height: 30px !important;
 				width: 65px;
 				padding: 0px;
 				margin-left: -130px;
@@ -472,6 +477,14 @@
 				padding-top: 1px;
 
 
+			}
+
+			#sombre {
+				margin-left: 30px;
+			}
+
+			.aide {
+				width: 370px;
 			}
 
 		}
