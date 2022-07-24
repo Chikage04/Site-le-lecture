@@ -4,6 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Venez lire des trucs cool ! :)">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://chikage04.github.io/scan/" + "library/" + niconiconii + '/' + lang + '/' + 'A (' + pageBIS + ')' + '.png'>
+	<meta property="og:url" content="https://chikage04.github.io/scan/read.html?niconiconii=" + color + "/vol1&total=" + total + ".html">
+	<meta property="og:description" content="">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" as="font"
 		type="font/woff2" crossorigin>
@@ -691,7 +696,17 @@
 	}
 
 	var anim = document.querySelector("#anim")
-	var etatanime = 'true';
+	if(isMobile()){
+		var etatanime = 'false';
+		anim.textContent = 'Off'
+		anim.style.backgroundColor = "red"
+		pageBIS = page + 1
+		document.getElementById('utile').src = 'library/' + niconiconii + '/' + lang + '/' + 'A (' + pageBIS + ')' + '.png';
+	} else{
+		var etatanime = 'true';
+		anim.textContent = 'On'
+	}
+	
 
 	function stopanime() {
 		if (etatanime == 'true') {
