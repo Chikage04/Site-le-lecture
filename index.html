@@ -114,10 +114,9 @@
 
 		.box {
 			display: flex;
+			flex-direction: row-reverse;
 			align-items: center;
-			justify-content: flex-start;
-			flex-direction: row;
-			align-content: stretch;
+			justify-content: space-between;
 
 
 		}
@@ -126,6 +125,7 @@
 			padding-left: 100px;
 			padding-bottom: 100px;
 			padding-top: 100px;
+			padding-right: 100px;
 		}
 
 		.box img {
@@ -161,21 +161,7 @@
 			background-repeat: repeat;
 		}
 
-		.container {
-			padding-bottom: 373px;
-		}
-
-		.container2 {
-			padding-bottom: 315px;
-		}
-
-		.container3 {
-			padding-bottom: 350px;
-		}
-
-		.container4 {
-			padding-bottom: 1px;
-		}
+		
 
 		.container-img {
 			width: 100%;
@@ -466,28 +452,14 @@
 				padding-left: 20px;
 				padding-bottom: 80px;
 				padding-top: 80px;
+				padding-right: 20px;
 			}
 
 			.box img {
 				width: 170px;
 			}
 
-			.container {
-				padding-bottom: 170px;
-			}
-
-			.container2 {
-				padding-bottom: 190px;
-				width: 166px;
-			}
-
-			.container3 {
-				padding-bottom: 220px;
-			}
-
-			.container4 {
-				padding-bottom: 1px;
-			}
+			
 
 			.texte {
 				display: flex;
@@ -678,85 +650,28 @@
 						</li>
 					</ul>
 				</div>
-				<div class="texte">
-					<div class="container">
-						<div class="container-text">
-							<div class="container-haut" href='read.html?niconiconii=majo no ie/vol1&total=5'>
-								<a href='read.html?niconiconii=majo no ie/vol1&total=5'>
-									<div class="next">
-										<p id="start">Lire</p>
-									</div>
-								</a>
-							</div>
-							<div class="container-bas">
-								Une histoire en 4 pages à l'eau de rose.
-
-								Une histoire d'amour prête à débuter.
-							</div>
-						</div>
-
-					</div>
-
-					<div class="container2">
-						<div class="container-text">
-							<div class="container-haut">
-
-								<a href='read.html?niconiconii=color/vol1&total=12'>
-									<div class="next">
-										<p id="start">Lire</p>
-									</div>
-								</a>
-
-							</div>
-							<div class="container-bas">
-								Récit fantastique de 12 pages qui va vous en mettre plein les yeux. Des couleurs
-								superbent, une histoire rêveuse.
-							</div>
-						</div>
-
-					</div>
-					<div class="container3">
-						<div class="container-text">
-							<div class="container-haut">
-
-								<a href='read.html?niconiconii=momo/vol1&total=5'>
-									<div class="next">
-										<p id="start">Lire</p>
-									</div>
-								</a>
-
-							</div>
-							<div class="container-bas">
-								Une histoire courte et amusante.
-							</div>
-						</div>
-
-					</div>
-					<div class="container4">
-						<div class="container-text">
-							<div class="container-haut">
-
-								<a href='read.html?niconiconii=lezard/vol1&total=47'>
-									<div class="next">
-										<p id="start">Lire</p>
-									</div>
-								</a><br>
-
-							</div>
-							<div class="container-bas">
-								Un assassin pas comme les autres.
-								47 pages d'histoire pour découvrir
-								ce qui se cache derière lui.
-							</div>
-						</div>
-
-					</div>
-				</div>
 				<div class='pika2'>
 
 					<h3>Le jardin de Camelia Otome</h3>
 
 					<div class="box">
+						<div class="container">
+							<div class="container-text">
+								<div class="container-haut" href='read.html?niconiconii=majo no ie/vol1&total=5'>
+									<a href='read.html?niconiconii=majo no ie/vol1&total=5'>
+										<div class="next">
+											<p id="start">Lire</p>
+										</div>
+									</a>
+								</div>
+								<div class="container-bas">
+									Une histoire en 4 pages à l'eau de rose.
+	
+									Une histoire d'amour prête à débuter.
+								</div>
+							</div>
+	
+						</div>
 						<a id="couv2" href="read.html?niconiconii=majo no ie/vol1&total=5">
 							<img src="library/majo%20no%20ie/vol1/jp/A (1).png">
 						</a>
@@ -766,9 +681,34 @@
 
 
 				</div>
+				<div class="principe">
+					<ul>
+						<li>
+							<h2 id="credit">One Shot</h2>
+						</li>
+					</ul>
+				</div>
 				<div class="pika2">
 					<h3>Le récit du crépuscule rouge</h3>
 					<div class="box">
+						<div class="container2">
+							<div class="container-text">
+								<div class="container-haut">
+	
+									<a href='read.html?niconiconii=color/vol1&total=12'>
+										<div class="next">
+											<p id="start">Lire</p>
+										</div>
+									</a>
+	
+								</div>
+								<div class="container-bas">
+									Récit fantastique de 12 pages qui va vous en mettre plein les yeux. Des couleurs
+									superbent, une histoire rêveuse.
+								</div>
+							</div>
+	
+						</div>
 						<a href='read.html?niconiconii=color/vol1&total=12'><img
 								src="library/color/vol1\jp\A (1).png"></a>
 
@@ -777,12 +717,48 @@
 				<div class="pika2">
 					<h3>L'amour de Momonoki</h3>
 					<div class="box">
+						<div class="container3">
+							<div class="container-text">
+								<div class="container-haut">
+
+									<a href='read.html?niconiconii=momo/vol1&total=4'>
+										<div class="next">
+											<p id="start">Lire</p>
+										</div>
+									</a>
+
+								</div>
+								<div class="container-bas">
+									Une histoire courte et amusante.
+								</div>
+							</div>
+
+						</div>
 						<a href='read.html?niconiconii=momo/vol1&total=5'><img src="library/momo/vol1\jp\A (1).png"></a>
 					</div>
 				</div>
 				<div class="pika2">
 					<h3>Le style Lézard [RAW] </h3>
-					<div class="box">
+					<div id="box4" class="box">
+						<div class="container4">
+							<div class="container-text">
+								<div class="container-haut">
+
+									<a href='read.html?niconiconii=lezard/vol1&total=47'>
+										<div class="next">
+											<p id="start">Lire</p>
+										</div>
+									</a><br>
+
+								</div>
+								<div class="container-bas">
+									Un assassin pas comme les autres.
+									47 pages d'histoire pour découvrir
+									ce qui se cache derière lui.
+								</div>
+							</div>
+
+						</div>
 						<a href='read.html?niconiconii=lezard/vol1&total=47'><img
 								src="library/lezard/vol1\jp\A (1).png"></a>
 
